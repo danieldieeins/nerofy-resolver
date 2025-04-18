@@ -2,25 +2,13 @@
     <script>
         function redirect() {
             let url = window.location.href;
-
-            if (url.includes("nerores=1")) {
-                window.location.href = "https://www.nerofy.de/404/";
-                return;
-            }
-
             if (url.includes("nerofy.de")) {
                 url = url.replaceAll("nerofy.de", "nrfy.net");
             } else if (url.includes("nrfy.net")) {
                 url = url.replaceAll("nrfy.net", "nerofy.de");
             }
-            if (url.includes("?")) {
-                url = url + "&nerores=1"
-            } else {
-                url = url + "?nerores=1";
-            }
             window.location.href = url;
         }
-
         redirect();
     </script>
 </body>
